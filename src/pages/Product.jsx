@@ -28,10 +28,9 @@ const Product = () => {
 
   return productsData ? (
     <div className="border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100">
-      {/* ---------------------- Producsts Data ----------------------*/}
+      {/* ---------------------- Product Data ----------------------*/}
       <div className="flex gap-12 sm:gap-12 flex-col sm:flex-row">
-        {/* ---------------------- products images ---------------------- */}
-
+        {/* ---------------------- Product Images ---------------------- */}
         <div className="flex-1 flex flex-col-reverse gap-3 sm:flex-row ">
           {/* ---------------------- List images ----------------------*/}
           <div className="flex sm:flex-col  overflow-x-auto sm:overflow-y-scroll justify-between  sm:justify-normal sm:w-[18.7%] w-full">
@@ -41,12 +40,12 @@ const Product = () => {
                 src={item}
                 alt="product"
                 onClick={() => setImage(item)}
-                className="cursor-pointer w-[24%]  sm:w-full sm:mb-3 flex-shrink-0  object-cover"
+                className="cursor-pointer w-[24%] sm:w-full sm:mb-3 flex-shrink-0  object-cover"
               />
             ))}
           </div>
 
-          {/*---------------------- main img---------------------- */}
+          {/*---------------------- Main Image ---------------------- */}
           <div className="w-full sm:w-[80%]">
             <img
               src={image}
@@ -56,8 +55,7 @@ const Product = () => {
           </div>
         </div>
 
-        {/* ---------------------- products details ---------------------- */}
-
+        {/* ---------------------- Product Details ---------------------- */}
         <div className="flex-1">
           <h1 className="font-medium text-2xl mt-2">{productsData.name}</h1>
 
@@ -78,15 +76,31 @@ const Product = () => {
             {productsData.description}
           </p>
 
+          {/* Instagram Section */}
+          <div className="mt-5 flex items-center gap-4">
+            <p className="font-medium text-lg">Instagram: </p>
+            <a
+              href={`https://instagram.com/${productsData.ig_username}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              @{productsData.ig_username}
+            </a>
+          </div>
+          <div className="mt-2 flex items-center gap-4">
+            <p className="font-medium text-lg">Followers: </p>
+            <p>{productsData.followers}</p>
+          </div>
+
+          {/* Size Selector */}
           <div className="flex flex-col gap-4 my-8">
-            <p className="">Select Size</p>
+            <p>Select Size</p>
             <div className="flex gap-2">
               {productsData.sizes.map((item, index) => (
                 <button
                   key={index}
-                  onClick={() => {
-                    setSize(item);
-                  }}
+                  onClick={() => setSize(item)}
                   className={`w-8 h-8 border bg-gray-100 flex items-center justify-center cursor-pointer
                   ${item === size ? 'border-orange-500' : ''}
                   `}
@@ -107,42 +121,34 @@ const Product = () => {
           <hr className="mt-8 sm:w-4/5" />
 
           <div className="flex flex-col gap-1 mt-5 text-sm text-gray-500">
-            <p>100% Original product </p>
+            <p>100% Original product</p>
             <p>Free delivery on order above $49</p>
-            <p> Easy return and exchange policy within 7 days </p>
+            <p>Easy return and exchange policy within 7 days</p>
           </div>
         </div>
       </div>
 
-      {/* ---------------------- Products Description and review section ----------------------*/}
-
+      {/* ---------------------- Product Description and Review Section ----------------------*/}
       <div className="mt-10">
         <div className="flex">
           <b className="px-5 py-3 text-sm border">Description</b>
           <p className="px-5 py-3 text-sm border">Reviews (122)</p>
         </div>
 
-        <div className=" flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500 ">
+        <div className="flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500">
           <p>
-            Ane-commerce website is an online platform that facilitates the
-            buying and selling of products or services over the internet. It
-            serves as a vietual marketplace where businesses and individuals.com
-            showcase ther produch, interact with customers, and conduct
-            fransactions without the need for a physical presence. E-commerce
-            websites have goned immense popularity due to their convenience,
-            accessibility, and the global reach they offer.
+            E-commerce websites have gained immense popularity due to their
+            convenience, accessibility, and the global reach they offer.
           </p>
           <p>
-            E-commerce websites typically display products or services along
-            with defailed descriptions, images, prices, and any ovalable
-            variations (eg, sizes colors). Each product uwaly has its ww
-            dedicated page with relevant infurroution
+            E-commerce websites typically display products along with detailed
+            descriptions, images, prices, and any available variations (eg,
+            sizes, colors).
           </p>
         </div>
       </div>
 
-      {/* ----------------------  Display Products  Products ----------------------*/}
-
+      {/* ---------------------- Related Products ---------------------- */}
       <RelatedProducts
         category={productsData.category}
         subCategory={productsData.subCategory}
@@ -152,5 +158,7 @@ const Product = () => {
     <div className="opacity-0"></div>
   );
 };
+
+
 
 export default Product;
