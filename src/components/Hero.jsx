@@ -53,7 +53,7 @@ const Hero = () => {
       {/* Hero Right Side */}
 
       {/* <img src={assets.hero_img} alt="" className="w-full sm:w-1/2" /> */}
-      <div className='w-full sm:w-1/2 flex flex-col justify-center h-[500px]  bg-pink-400 p-8'>
+      <div className='w-full sm:w-1/2 flex flex-col justify-center h-[500px]  bg-white-400 p-8'>
       <Slider {...settings}>
         {data.map((d) => (
           <img src={d} alt="" className="w-full sm:w-full h-[500px] object-contain justify-center overflow-hidden" />
