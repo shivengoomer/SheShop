@@ -246,7 +246,7 @@ const Collection = () => {
         </div>
 
         {/* Product List */}
-        <div className="grid grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4 gap-y-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 gap-y-6">
           {filterProducts.map((product) => (
             <ProductItem
               key={product._id}
@@ -254,6 +254,8 @@ const Collection = () => {
               image={product.image}
               name={product.name}
               price={product.price}
+              ig_username={product.ig_username} // Assuming the Instagram info is part of the product
+              followers={product.followers} // Assuming followers is part of the product data
             />
           ))}
         </div>
