@@ -78,7 +78,7 @@ const Product = () => {
 
           {/* Instagram Section */}
           <div className="mt-5 flex items-center gap-4">
-            <p className="font-medium text-lg">Instagram: </p>
+            <p className="font-large text-lg">Instagram: </p>
             <a
               href={`https://instagram.com/${productsData.ig_username}`}
               target="_blank"
@@ -89,8 +89,8 @@ const Product = () => {
             </a>
           </div>
           <div className="mt-2 flex items-center gap-4">
-            <p className="font-medium text-lg">Followers: </p>
-            <p>{productsData.followers}</p>
+            <p className="font-small text-lg">Also CheckOut thier Instagram Page! </p>
+      
           </div>
 
           {/* Size Selector */}

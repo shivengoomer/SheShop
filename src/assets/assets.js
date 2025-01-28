@@ -101,77 +101,85 @@ export const products = [
         _id: "aaaaa",
         name: "Women Round Neck Cotton Top",
         description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
-        price: 100,
+        price: 1000,
         image: [p_img1],
         category: "Women",
         subCategory: "Topwear",
         sizes: ["S", "M", "L"],
         date: 1716634345448,
         bestseller: true,
-        ig_username:"xyz",
+        ig_username:"trendyybn",
         followers:"123k"
     },
     {
         _id: "aaaab",
         name: "Men Round Neck Pure Cotton T-shirt",
         description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
-        price: 200,
+        price: 250,
         image: [p_img2_1,p_img2_2,p_img2_3,p_img2_4],
         category: "Men",
         subCategory: "Topwear",
         sizes: ["M", "L", "XL"],
         date: 1716621345448,
         bestseller: true,
-        ig_username: "smart87_guy", // Example
+        ig_username: "romanisland", // Example
         followers: "123m"
     },
     {
         _id: "aaaac",
         name: "Girls Round Neck Cotton Top",
         description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
-        price: 220,
+        price: 260,
         image: [p_img3],
         category: "Kids",
         subCategory: "Topwear",
         sizes: ["S", "L", "XL"],
         date: 1716234545448,
-        bestseller: true
+        bestseller: true,
+        ig_username: "prettylittlething",
+        followers: "2.3 M"
     },
     {
         _id: "aaaad",
         name: "Men Round Neck Pure Cotton T-shirt",
         description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
-        price: 110,
+        price: 450,
         image: [p_img4],
         category: "Men",
         subCategory: "Topwear",
         sizes: ["S", "M", "XXL"],
         date: 1716621345448,
-        bestseller: true
+        bestseller: true,
+        ig_username: "romanisland",
+        followers: "200k"
     },
     {
         _id: "aaaae",
         name: "Women Round Neck Cotton Top",
         description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
-        price: 130,
+        price: 980,
         image: [p_img5],
         category: "Women",
         subCategory: "Topwear",
         sizes: ["M", "L", "XL"],
         date: 1716622345448,
-        bestseller: true
+        bestseller: true,
+        ig_username: "in.urbansuburban",
+        followers: "123k"
     },
     {
         _id: "aaaaf",
         name: "Girls Round Neck Cotton Top",
         description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
-        price: 140,
+        price: 500,
         image: [p_img6],
         category: "Kids",
         subCategory: "Topwear",
         sizes: ["S", "L", "XL"],
         date: 1716623423448,
-        bestseller: true
+        bestseller: true,
+        ig_username: "todds_couture",
+        followers: "123K"
     },
     {
         _id: "aaaag",
@@ -183,7 +191,9 @@ export const products = [
         subCategory: "Bottomwear",
         sizes: ["S", "L", "XL"],
         date: 1716621542448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "romanisland",
+        followers: "200k"
     },
     {
         _id: "aaaah",
@@ -195,7 +205,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716622345448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "in.urbansuburban",
+        followers: "200k"
     },
     {
         _id: "aaaai",
@@ -207,7 +219,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["M", "L", "XL"],
         date: 1716621235448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "in.urbansuburban",
+        followers: "2.3 M"
     },
     {
         _id: "aaaaj",
@@ -219,7 +233,9 @@ export const products = [
         subCategory: "Bottomwear",
         sizes: ["S", "L", "XL"],
         date: 1716622235448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "in.urbansuburban",
+        followers: "200k"
     },
     {
         _id: "aaaak",
@@ -231,7 +247,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L"],
         date: 1716623345448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "in.urbansuburban",
+        followers: "200k"
     },
     {
         _id: "aaaal",
@@ -243,7 +261,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716624445448,
-        bestseller: false
+        bestseller: false,
+        ig_username:"trendyybn",
+        followers:"123k"
     },
     {
         _id: "aaaam",
@@ -255,7 +275,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716625545448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "in.urbansuburban",
+        followers: "12.3 M"
     },
     {
         _id: "aaaan",
@@ -267,7 +289,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716626645448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "todds_couture",
+        followers: "2.3 M"
     },
     {
         _id: "aaaao",
@@ -279,7 +303,9 @@ export const products = [
         subCategory: "Bottomwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716627745448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "in.urbansuburban",
+        followers: "200k"
     },
     {
         _id: "aaaap",
@@ -291,7 +317,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716628845448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "todds_couture",
+        followers: "2.3 M"
     },
     {
         _id: "aaaaq",
@@ -303,7 +331,9 @@ export const products = [
         subCategory: "Bottomwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716629945448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "romanisland",
+        followers: "200k"
     },
     {
         _id: "aaaar",
@@ -315,7 +345,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716631045448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "carters",
+        followers: "2.3 M"
     },
     {
         _id: "aaaas",
@@ -327,7 +359,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716632145448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "carters",
+        followers: "2.3 M"
     },
     {
         _id: "aaaat",
@@ -339,7 +373,9 @@ export const products = [
         subCategory: "Bottomwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716633245448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "womens_wear",
+        followers: "12.3 M"
     },
     {
         _id: "aaaau",
@@ -351,7 +387,9 @@ export const products = [
         subCategory: "Winterwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716634345448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "womens_wear",
+        followers: "12.3 M"
     },
     {
         _id: "aaaav",
@@ -363,7 +401,9 @@ export const products = [
         subCategory: "Bottomwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716635445448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "womens_wear",
+        followers: "12.3 M"
     },
     {
         _id: "aaaaw",
@@ -375,7 +415,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716636545448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "carters",
+        followers: "2.3 M"
     },
     {
         _id: "aaaax",
@@ -387,7 +429,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716637645448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "carters",
+        followers: "2.3 M"
     },
     {
         _id: "aaaay",
@@ -399,7 +443,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716638745448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "carters",
+        followers: "2.3 M"
     },
     {
         _id: "aaaaz",
@@ -411,7 +457,9 @@ export const products = [
         subCategory: "Winterwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716639845448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "womens_wear",
+        followers: "12.3 M"
     },
     {
         _id: "aaaba",
@@ -423,7 +471,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716640945448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "carters",
+        followers: "2.3 M"
     },
     {
         _id: "aaabb",
@@ -435,7 +485,9 @@ export const products = [
         subCategory: "Winterwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716642045448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "romanisland",
+        followers: "200k"
     },
     {
         _id: "aaabc",
@@ -447,7 +499,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716643145448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "womens_wear",
+        followers: "12.3 M"
     },
     {
         _id: "aaabd",
@@ -459,7 +513,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716644245448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "todds_couture",
+        followers: "2.3 M"
     },
     {
         _id: "aaabe",
@@ -471,7 +527,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716645345448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "romanisland",
+        followers: "200k"
     },
     {
         _id: "aaabf",
@@ -483,7 +541,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716646445448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "romanisland",
+        followers: "200k"
     },
     {
         _id: "aaabg",
@@ -495,7 +555,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716647545448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "todds_couture",
+        followers: "2.3 M"
     },
     {
         _id: "aaabh",
@@ -507,7 +569,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716648645448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "womens_wear",
+        followers: "12.3 M"
     },
     {
         _id: "aaabi",
@@ -519,7 +583,9 @@ export const products = [
         subCategory: "Winterwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716649745448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "womens_wear",
+        followers: "12.3 M"
     },
     {
         _id: "aaabj",
@@ -531,7 +597,9 @@ export const products = [
         subCategory: "Winterwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716650845448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "womens_wear",
+        followers: "12.3 M"
     },
     {
         _id: "aaabk",
@@ -543,7 +611,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716651945448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "womens_wear",
+        followers: "12.3 M"
     },
     {
         _id: "aaabl",
@@ -555,7 +625,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716653045448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "romanisland",
+        followers: "200k"
     },
     {
         _id: "aaabm",
@@ -567,7 +639,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716654145448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "romanisland",
+        followers: "200k"
     },
     {
         _id: "aaabn",
@@ -579,7 +653,9 @@ export const products = [
         subCategory: "Winterwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716655245448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "romanisland",
+        followers: "200k"
     },
     {
         _id: "aaabo",
@@ -591,7 +667,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716656345448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "romanisland",
+        followers: "200k"
     },
     {
         _id: "aaabp",
@@ -603,7 +681,9 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716657445448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "todds_couture",
+        followers: "2.3 M"
     },
     {
         _id: "aaabq",
@@ -615,7 +695,9 @@ export const products = [
         subCategory: "Bottomwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716658545448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "todds_couture",
+        followers: "2.3 M"
     },
     {
         _id: "aaabr",
@@ -627,7 +709,9 @@ export const products = [
         subCategory: "Winterwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716659645448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "womens_wear",
+        followers: "12.3 M"
     },
     {
         _id: "aaabs",
@@ -639,7 +723,9 @@ export const products = [
         subCategory: "Winterwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716660745448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "romanisland",
+        followers: "200k"
     },
     {
         _id: "aaabt",
@@ -651,7 +737,9 @@ export const products = [
         subCategory: "Winterwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716661845448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "romanisland",
+        followers: "200k"
     },
     {
         _id: "aaabu",
@@ -663,7 +751,9 @@ export const products = [
         subCategory: "Bottomwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716662945448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "carters",
+        followers: "2.3 M"
     },
     {
         _id: "aaabv",
@@ -675,7 +765,9 @@ export const products = [
         subCategory: "Winterwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716664045448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "romanisland",
+        followers: "200k"
     },
     {
         _id: "aaabw",
@@ -687,7 +779,9 @@ export const products = [
         subCategory: "Bottomwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716665145448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "carters",
+        followers: "2.3 M"
     },
     {
         _id: "aaabx",
@@ -698,7 +792,9 @@ export const products = [
         category: "Kids",
         subCategory: "Bottomwear",
         sizes: ["S", "M", "L", "XL"],
-        date: 1716666245448, bestseller: false
+        date: 1716666245448, bestseller: false,
+        ig_username: "carters",
+        followers: "2.3 M"
     },
     {
         _id: "aaaby",
@@ -710,7 +806,9 @@ export const products = [
         subCategory: "Winterwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716667345448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "womens_wear",
+        followers: "12.3 M"
     },
     {
         _id: "aaabz",
@@ -722,7 +820,9 @@ export const products = [
         subCategory: "Winterwear",
         sizes: ["S", "M", "L", "XL"],
         date: 1716668445448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "romanisland",
+        followers: "200k"
     },
     {
         "_id": "aabcz",
@@ -734,7 +834,9 @@ export const products = [
         "subCategory": "Wallets",
         "sizes": ["One Size"],
         "date": 1716668445449,
-        "bestseller": true
+        "bestseller": true,
+        ig_username: "accessories_love",
+        followers: "80k"
       },
       {
         "_id": "aabcy",
@@ -746,7 +848,9 @@ export const products = [
         "subCategory": "Eyewear",
         "sizes": ["One Size"],
         "date": 1716668445450,
-        "bestseller": false
+        "bestseller": false,
+        ig_username: "accessories_love",
+        followers: "80k"
       },
       {
         "_id": "aabcx",
@@ -758,7 +862,9 @@ export const products = [
         "subCategory": "Watches",
         "sizes": ["One Size"],
         "date": 1716668445451,
-        "bestseller": true
+        "bestseller": true,
+        ig_username: "accessories_love",
+        followers: "80k"
       },
       {
         "_id": "aabcw",
@@ -770,7 +876,9 @@ export const products = [
         "subCategory": "Wearables",
         "sizes": ["One Size"],
         "date": 1716668445452,
-        "bestseller": false
+        "bestseller": false,
+        ig_username: "accessories_love",
+        followers: "80k"
       },
       {
         "_id": "aabcv",
@@ -782,7 +890,9 @@ export const products = [
         "subCategory": "Bags",
         "sizes": ["One Size"],
         "date": 1716668445453,
-        "bestseller": true
+        "bestseller": true,
+        ig_username: "accessories_love",
+        followers: "80k"
       },
       {
         "_id": "aabcu",
@@ -794,7 +904,9 @@ export const products = [
         "subCategory": "Belts",
         "sizes": ["One Size"],
         "date": 1716668445454,
-        "bestseller": false
+        "bestseller": false,
+        ig_username: "accessories_love",
+        followers: "80k"
       },
       {
         "_id": "aabct",
@@ -806,7 +918,9 @@ export const products = [
         "subCategory": "Headwear",
         "sizes": ["One Size"],
         "date": 1716668445455,
-        "bestseller": true
+        "bestseller": true,
+        ig_username: "accessories_love",
+        followers: "80k"
       },
       {
         "_id": "aabcs",
@@ -818,7 +932,9 @@ export const products = [
         "subCategory": "Belts",
         "sizes": ["S", "M", "L", "XL"],
         "date": 1716668445456,
-        "bestseller": false
+        "bestseller": false,
+        ig_username: "accessories_love",
+        followers: "80k"
       },
       {
         "_id": "aabcr",
@@ -830,7 +946,9 @@ export const products = [
         "subCategory": "Gadgets",
         "sizes": ["One Size"],
         "date": 1716668445457,
-        "bestseller": true
+        "bestseller": true,
+        ig_username: "accessories_love",
+        followers: "80k"
       },
       {
         "_id": "aabcq",
@@ -842,127 +960,9 @@ export const products = [
         "subCategory": "Bags",
         "sizes": ["One Size"],
         "date": 1716668445458,
-        "bestseller": false
-      },
-      {
-        "_id": "aabcz",
-        "name": "Leather Wallet",
-        "description": "Genuine leather wallet with multiple card slots and a coin pocket.",
-        "price": 120,
-        "image": ["wallet_img1"],
-        "category": "Accessories",
-        "subCategory": "Wallets",
-        "sizes": ["One Size"],
-        "date": 1716668445449,
-        "bestseller": true
-      },
-      {
-        "_id": "aabcy",
-        "name": "Sunglasses - Aviator",
-        "description": "Stylish aviator sunglasses with UV protection.",
-        "price": 180,
-        "image": ["sunglasses_img1"],
-        "category": "Accessories",
-        "subCategory": "Eyewear",
-        "sizes": ["One Size"],
-        "date": 1716668445450,
-        "bestseller": false
-      },
-      {
-        "_id": "aabcx",
-        "name": "Wrist Watch - Classic",
-        "description": "Elegant wristwatch with a stainless steel band and analog display.",
-        "price": 250,
-        "image": ["watch_img1"],
-        "category": "Accessories",
-        "subCategory": "Watches",
-        "sizes": ["One Size"],
-        "date": 1716668445451,
-        "bestseller": true
-      },
-      {
-        "_id": "aabcw",
-        "name": "Smart Band - Fitness Tracker",
-        "description": "Fitness tracker with heart rate monitor, step count, and sleep tracking.",
-        "price": 150,
-        "image": ["smart_band_img1"],
-        "category": "Accessories",
-        "subCategory": "Wearables",
-        "sizes": ["One Size"],
-        "date": 1716668445452,
-        "bestseller": false
-      },
-      {
-        "_id": "aabcv",
-        "name": "Backpack - Casual",
-        "description": "Spacious casual backpack with padded shoulder straps and multiple compartments.",
-        "price": 220,
-        "image": ["backpack_img1"],
-        "category": "Accessories",
-        "subCategory": "Bags",
-        "sizes": ["One Size"],
-        "date": 1716668445453,
-        "bestseller": true
-      },
-      {
-        "_id": "aabcu",
-        "name": "Canvas Belt",
-        "description": "Adjustable canvas belt with a metal buckle.",
-        "price": 40,
-        "image": ["belt_img1"],
-        "category": "Accessories",
-        "subCategory": "Belts",
-        "sizes": ["One Size"],
-        "date": 1716668445454,
-        "bestseller": false
-      },
-      {
-        "_id": "aabct",
-        "name": "Baseball Cap",
-        "description": "Stylish baseball cap with adjustable strap and embroidered logo.",
-        "price": 60,
-        "image": ["cap_img1"],
-        "category": "Accessories",
-        "subCategory": "Headwear",
-        "sizes": ["One Size"],
-        "date": 1716668445455,
-        "bestseller": true
-      },
-      {
-        "_id": "aabcs",
-        "name": "Leather Belt",
-        "description": "Premium leather belt with a smooth finish and classic buckle.",
-        "price": 100,
-        "image": ["leather_belt_img1"],
-        "category": "Accessories",
-        "subCategory": "Belts",
-        "sizes": ["S", "M", "L", "XL"],
-        "date": 1716668445456,
-        "bestseller": false
-      },
-      {
-        "_id": "aabcr",
-        "name": "Portable Power Bank",
-        "description": "High-capacity portable power bank with fast charging capability.",
-        "price": 85,
-        "image": ["power_bank_img1"],
-        "category": "Accessories",
-        "subCategory": "Gadgets",
-        "sizes": ["One Size"],
-        "date": 1716668445457,
-        "bestseller": true
-      },
-      {
-        "_id": "aabcq",
-        "name": "Tote Bag - Canvas",
-        "description": "Durable canvas tote bag with comfortable handles and large storage space.",
-        "price": 70,
-        "image": ["tote_bag_img1"],
-        "category": "Accessories",
-        "subCategory": "Bags",
-        "sizes": ["One Size"],
-        "date": 1716668445458,
-        "bestseller": false
+        "bestseller": false,
+        ig_username: "accessories_love",
+        followers: "80k"
       },
       {
         _id: "ddddz",
@@ -974,7 +974,9 @@ export const products = [
         subCategory: "Oil",
         sizes: ["100ml", "200ml"],
         date: 1716700445448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "ayurvedic_healing",
+        followers: "60k"
       },
       {
         _id: "eeeez",
@@ -986,7 +988,9 @@ export const products = [
         subCategory: "Oil",
         sizes: ["100ml", "150ml"],
         date: 1716701445448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "ayurvedic_healing",
+        followers: "60k"
       },
       {
         _id: "ffffz",
@@ -998,7 +1002,9 @@ export const products = [
         subCategory: "Oil",
         sizes: ["100ml", "200ml"],
         date: 1716702445448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "ayurvedic_healing",
+        followers: "60k"
       },
       {
         _id: "ggggz",
@@ -1010,7 +1016,9 @@ export const products = [
         subCategory: "Oil",
         sizes: ["50ml", "100ml"],
         date: 1716703445448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "ayurvedic_healing",
+        followers: "60k"
       },
       {
         _id: "hhhhz",
@@ -1022,6 +1030,8 @@ export const products = [
         subCategory: "Oil",
         sizes: ["100ml", "150ml"],
         date: 1716704445448,
-        bestseller: false
+        bestseller: false,
+        ig_username: "ayurvedic_healing",
+        followers: "60k"
       }
 ]
