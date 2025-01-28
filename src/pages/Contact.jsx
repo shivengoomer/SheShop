@@ -1,6 +1,7 @@
 import { assets } from '../assets/assets';
 import NewsLetterBox from '../Components/NewsLetterBox';
 import Title from '../Components/Title';
+import { motion } from "motion/react"
 
 const Contact = () => {
   const scrollToTop = () => {
@@ -11,7 +12,11 @@ const Contact = () => {
     });
   };
   return (
-    <div>
+    <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.5 }}
+    exit={{ opacity: 0 }}>
       <div className="to-current text-2xl pt-10 border-t">
         <Title text1={'CONTACT'} text2={'US'} />
       </div>
@@ -55,7 +60,7 @@ const Contact = () => {
       </div>
 
       <NewsLetterBox />
-    </div>
+    </motion.div>
   );
 };
 
