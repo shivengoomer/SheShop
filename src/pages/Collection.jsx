@@ -29,7 +29,7 @@ const Collection = () => {
   };
 
   const applyFilter = () => {
-    if (!products || products.length === 0) return; // Ensure products are available
+    if (!products || products.length === 0) return;
 
     let productsCopy = products.slice(); // Create a shallow copy of products
 
@@ -54,9 +54,9 @@ const Collection = () => {
   };
 
   const sortProducts = () => {
-    if (filterProducts.length === 0) return; // Ensure there are products to sort
+    if (filterProducts.length === 0) return;
 
-    let filteredProdCopy = [...filterProducts]; // Create a shallow copy of filtered products
+    let filteredProdCopy = [...filterProducts];
 
     switch (sortType) {
       case 'low-high':
@@ -70,7 +70,6 @@ const Collection = () => {
         setFilterProducts(() => {
           applyFilter();
         });
-
         break;
     }
 
@@ -85,10 +84,14 @@ const Collection = () => {
     sortProducts();
   }, [sortType]);
 
+  // Check if Men, Women, or Kids are selected
+  const showSubCategory = category.some((cat) =>
+    ['Men', 'Women', 'Kids'].includes(cat)
+  );
+
   return (
     <div className="flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t">
       {/* Filter Option */}
-
       <div className="min-w-52">
         <p
           onClick={() => {
@@ -142,52 +145,80 @@ const Collection = () => {
               />
               KIDS
             </p>
-          </div>
-        </div>
-
-        {/* Sub Catrgory Filter */}
-        <div
-          className={`border border-gray-300 pl-5 py-3 my-5 ${
-            showFilter ? '' : 'hidden'
-          } 
-            sm:block`}
-        >
-          <p className="mb-3 text-sm font-medium">TYPES</p>
-
-          <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
+            {/* New Categories */}
             <p className="flex gap-2">
               <input
                 type="checkbox"
                 className="w-3"
-                value={'Topwear'}
-                onChange={toggleSubCategory}
+                value={'Home'}
+                onChange={toggleCategory}
               />
-              Topwear
+              HOME
             </p>
             <p className="flex gap-2">
               <input
                 type="checkbox"
                 className="w-3"
-                value={'Bottomwear'}
-                onChange={toggleSubCategory}
+                value={'Ayurvedic'}
+                onChange={toggleCategory}
               />
-              Bottomwear
+              AYURVEDIC
             </p>
             <p className="flex gap-2">
               <input
                 type="checkbox"
                 className="w-3"
-                value={'Winterwear'}
-                onChange={toggleSubCategory}
+                value={'Accessories'}
+                onChange={toggleCategory}
               />
-              Winterwear
+              ACCESSORIES
             </p>
           </div>
         </div>
+
+        {/* Subcategory Filter - Only Show for Men, Women, or Kids */}
+        {showSubCategory && (
+          <div
+            className={`border border-gray-300 pl-5 py-3 my-5 ${
+              showFilter ? '' : 'hidden'
+            } sm:block`}
+          >
+            <p className="mb-3 text-sm font-medium">TYPES</p>
+
+            <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
+              <p className="flex gap-2">
+                <input
+                  type="checkbox"
+                  className="w-3"
+                  value={'Topwear'}
+                  onChange={toggleSubCategory}
+                />
+                Topwear
+              </p>
+              <p className="flex gap-2">
+                <input
+                  type="checkbox"
+                  className="w-3"
+                  value={'Bottomwear'}
+                  onChange={toggleSubCategory}
+                />
+                Bottomwear
+              </p>
+              <p className="flex gap-2">
+                <input
+                  type="checkbox"
+                  className="w-3"
+                  value={'Winterwear'}
+                  onChange={toggleSubCategory}
+                />
+                Winterwear
+              </p>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Right Side --> Product List */}
-
       <div className="flex-1">
         {/* Title */}
         <div className="flex justify-between text-sm sm:text-xl lg:text-2xl mb-4">
@@ -208,7 +239,6 @@ const Collection = () => {
         </div>
 
         {/* Product List */}
-
         <div className="grid grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4 gap-y-6">
           {filterProducts.map((product) => (
             <ProductItem
@@ -224,5 +254,4 @@ const Collection = () => {
     </div>
   );
 };
-
 export default Collection;
