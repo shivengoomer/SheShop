@@ -8,7 +8,7 @@ const Navbar = () => {
   const { setShowSearch, getCartCount } = useContext(ShopContext);
 
   return (
-    <div className=" w-full">
+    <div className=" w-full sticky z-10 bg-white top-0">
       <div className="flex items-center justify-between px-3 py-5 font-medium">
         <Link to="/">
           <img src={Logo} alt="logo" className="w-36" />
