@@ -36,7 +36,7 @@ const SearchBar = () => {
 
   // Conditionally render the search bar based on visibility and showSearch state
   return visible && showSearch ? (
-    <div className={`border-t border-b bg-gray-50 text-center ${animate} `}>
+    <div className={`border-t border-b z-80 fixed bg-gray-50 text-center ${animate} `}>
       <div className="w-[450px] inline-flex items-center justify-center border border-gray-400 px-5 py-2 my-8 rounded-full ">
         <input
           type="text"
