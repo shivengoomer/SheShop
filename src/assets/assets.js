@@ -53,6 +53,14 @@ import p_img49 from './p_img49.png'
 import p_img50 from './p_img50.png'
 import p_img51 from './p_img51.png'
 import p_img52 from './p_img52.png'
+import wallet_img1 from './wallet_img1.png';
+import sunglasses_img1 from './sunglasses_img1.png';
+import cap_img1 from './cap_img1.png';
+import leather_belt_img1 from './leather_belt_img1.png';
+import p_img56 from './p_img56.png';
+import p_img59 from './p_img59.png';
+
+
 
 
 import logo from './logo.png'
@@ -73,6 +81,8 @@ import contact_img from './contact_img.png'
 import razorpay_logo from './razorpay_logo.png'
 import stripe_logo from './stripe_logo.png'
 import cross_icon from './cross_icon.png'
+
+
 
 export const assets = {
     logo,
@@ -829,7 +839,7 @@ export const products = [
         "name": "Leather Wallet",
         "description": "Genuine leather wallet with multiple card slots and a coin pocket.",
         "price": 120,
-        "image": ["wallet_img1"],
+        "image": [wallet_img1],
         "category": "Accessories",
         "subCategory": "Wallets",
         "sizes": ["One Size"],
@@ -843,7 +853,7 @@ export const products = [
         "name": "Sunglasses - Aviator",
         "description": "Stylish aviator sunglasses with UV protection.",
         "price": 180,
-        "image": ["sunglasses_img1"],
+        "image": [sunglasses_img1],
         "category": "Accessories",
         "subCategory": "Eyewear",
         "sizes": ["One Size"],
@@ -852,68 +862,16 @@ export const products = [
         ig_username: "accessories_love",
         followers: "80k"
       },
-      {
-        "_id": "aabcx",
-        "name": "Wrist Watch - Classic",
-        "description": "Elegant wristwatch with a stainless steel band and analog display.",
-        "price": 250,
-        "image": ["watch_img1"],
-        "category": "Accessories",
-        "subCategory": "Watches",
-        "sizes": ["One Size"],
-        "date": 1716668445451,
-        "bestseller": true,
-        ig_username: "accessories_love",
-        followers: "80k"
-      },
-      {
-        "_id": "aabcw",
-        "name": "Smart Band - Fitness Tracker",
-        "description": "Fitness tracker with heart rate monitor, step count, and sleep tracking.",
-        "price": 150,
-        "image": ["smart_band_img1"],
-        "category": "Accessories",
-        "subCategory": "Wearables",
-        "sizes": ["One Size"],
-        "date": 1716668445452,
-        "bestseller": false,
-        ig_username: "accessories_love",
-        followers: "80k"
-      },
-      {
-        "_id": "aabcv",
-        "name": "Backpack - Casual",
-        "description": "Spacious casual backpack with padded shoulder straps and multiple compartments.",
-        "price": 220,
-        "image": ["backpack_img1"],
-        "category": "Accessories",
-        "subCategory": "Bags",
-        "sizes": ["One Size"],
-        "date": 1716668445453,
-        "bestseller": true,
-        ig_username: "accessories_love",
-        followers: "80k"
-      },
-      {
-        "_id": "aabcu",
-        "name": "Canvas Belt",
-        "description": "Adjustable canvas belt with a metal buckle.",
-        "price": 40,
-        "image": ["belt_img1"],
-        "category": "Accessories",
-        "subCategory": "Belts",
-        "sizes": ["One Size"],
-        "date": 1716668445454,
-        "bestseller": false,
-        ig_username: "accessories_love",
-        followers: "80k"
-      },
+
+      
+      
+    
       {
         "_id": "aabct",
         "name": "Baseball Cap",
         "description": "Stylish baseball cap with adjustable strap and embroidered logo.",
         "price": 60,
-        "image": ["cap_img1"],
+        "image": [cap_img1],
         "category": "Accessories",
         "subCategory": "Headwear",
         "sizes": ["One Size"],
@@ -927,7 +885,7 @@ export const products = [
         "name": "Leather Belt",
         "description": "Premium leather belt with a smooth finish and classic buckle.",
         "price": 100,
-        "image": ["leather_belt_img1"],
+        "image": [leather_belt_img1],
         "category": "Accessories",
         "subCategory": "Belts",
         "sizes": ["S", "M", "L", "XL"],
@@ -936,54 +894,13 @@ export const products = [
         ig_username: "accessories_love",
         followers: "80k"
       },
-      {
-        "_id": "aabcr",
-        "name": "Portable Power Bank",
-        "description": "High-capacity portable power bank with fast charging capability.",
-        "price": 85,
-        "image": ["power_bank_img1"],
-        "category": "Accessories",
-        "subCategory": "Gadgets",
-        "sizes": ["One Size"],
-        "date": 1716668445457,
-        "bestseller": true,
-        ig_username: "accessories_love",
-        followers: "80k"
-      },
-      {
-        "_id": "aabcq",
-        "name": "Tote Bag - Canvas",
-        "description": "Durable canvas tote bag with comfortable handles and large storage space.",
-        "price": 70,
-        "image": ["tote_bag_img1"],
-        "category": "Accessories",
-        "subCategory": "Bags",
-        "sizes": ["One Size"],
-        "date": 1716668445458,
-        "bestseller": false,
-        ig_username: "accessories_love",
-        followers: "80k"
-      },
-      {
-        _id: "ddddz",
-        name: "Herbal Oil",
-        description: "A natural herbal oil for skin and hair care.",
-        price: 200,
-        image: ["p_img55"],
-        category: "Ayurvedic",
-        subCategory: "Oil",
-        sizes: ["100ml", "200ml"],
-        date: 1716700445448,
-        bestseller: false,
-        ig_username: "ayurvedic_healing",
-        followers: "60k"
-      },
-      {
+     
+        {
         _id: "eeeez",
         name: "Aloe Vera Oil",
         description: "A soothing aloe vera-based oil for skin and scalp.",
         price: 150,
-        image: ["p_img56"],
+        image: [p_img56],
         category: "Ayurvedic",
         subCategory: "Oil",
         sizes: ["100ml", "150ml"],
@@ -993,39 +910,11 @@ export const products = [
         followers: "60k"
       },
       {
-        _id: "ffffz",
-        name: "Neem Oil",
-        description: "A natural neem oil known for its anti-bacterial properties.",
-        price: 250,
-        image: ["p_img57"],
-        category: "Ayurvedic",
-        subCategory: "Oil",
-        sizes: ["100ml", "200ml"],
-        date: 1716702445448,
-        bestseller: false,
-        ig_username: "ayurvedic_healing",
-        followers: "60k"
-      },
-      {
-        _id: "ggggz",
-        name: "Lavender Oil",
-        description: "A calming lavender oil for relaxation and skin rejuvenation.",
-        price: 180,
-        image: ["p_img58"],
-        category: "Ayurvedic",
-        subCategory: "Oil",
-        sizes: ["50ml", "100ml"],
-        date: 1716703445448,
-        bestseller: false,
-        ig_username: "ayurvedic_healing",
-        followers: "60k"
-      },
-      {
         _id: "hhhhz",
         name: "Tulsi Oil",
         description: "A healing tulsi oil for stress relief and immunity boost.",
         price: 220,
-        image: ["p_img59"],
+        image: [p_img59],
         category: "Ayurvedic",
         subCategory: "Oil",
         sizes: ["100ml", "150ml"],

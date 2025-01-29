@@ -1,8 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { useContext, useState } from "react";
-import { ShopContext } from "../Context/ShopContext";
+import { ShopContext } from "../context/ShopContext";
 import Logo from '../myassets/sheshoplogo.png'
+
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
   const { setShowSearch, getCartCount } = useContext(ShopContext);
@@ -11,7 +12,7 @@ const Navbar = () => {
     <div className=" w-full sticky z-10 bg-white top-0">
       <div className="flex items-center justify-between px-3 py-5 font-medium">
         <Link to="/">
-          <img src={Logo} alt="logo" className="w-36" />
+          <img src={Logo} alt="logo" className="w-60 h-30" />
         </Link>
 
         <ul className="hidden sm:flex gap-5 text-sm text-gray-700">

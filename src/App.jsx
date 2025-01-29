@@ -9,11 +9,12 @@ import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import PlaceOrder from "./pages/PlaceOrder";
 import Navbar from "./components/Navbar";
+import SearchBar from "./components/SearchBar";
 const App = () => {
   return (
     <div className="px-4 sm:px-[2vw]">
       <Navbar />
-
+      <SearchBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/collection" element={<Collection />} />
