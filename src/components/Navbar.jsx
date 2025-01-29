@@ -2,17 +2,17 @@ import { Link, NavLink } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { useContext, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
-import Logo from '../myassets/sheshoplogo.png'
+import Logo from '../myassets/SheShop.png'
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
-  const { setShowSearch, getCartCount } = useContext(ShopContext);
+  const { setShowSearch, getCartCount, isloggedIn } = useContext(ShopContext);
 
   return (
     <div className=" w-full sticky z-10 bg-white top-0">
-      <div className="flex items-center justify-between px-3 py-5 font-medium">
+      <div className="flex items-center justify-between px-3 py-3 font-medium">
         <Link to="/">
-          <img src={Logo} alt="logo" className="w-60 h-30" />
+          <img src={Logo} alt="logo" className="h-24 p-3" />
         </Link>
 
         <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
@@ -53,6 +53,16 @@ const Navbar = () => {
                 alt=""
                 className="w-5 cursor-pointer"
               />
+              {isloggedIn && (
+            <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
+              <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded">
+                <p className="cursor-pointer hover:text-black">My Profile</p>
+                <Link to="/orders" className="cursor-pointer hover:text-black">
+                  Orders
+                </Link>
+              </div>
+            </div>
+          )}
             </Link>
           </div>
         
@@ -72,7 +82,7 @@ const Navbar = () => {
         />
       </div>
       </div>
-
+              
       {/* Sidebar menu for small screens */}
       <div
         className={`absolute top-0 right-0 bottom-0 overflow-hidden z-51 bg-white ease-in duration-300

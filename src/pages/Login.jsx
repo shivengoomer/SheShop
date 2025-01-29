@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { ShopContext } from '../context/ShopContext';
+import { set } from 'mongoose';
 const Login = () => {
+  const {setIsLoggedIn} = useContext(ShopContext);
   const [currentState, setCurrentState] = useState('Sign Up');
   const [role, setRole] = useState('Buyer');
   const [sellerDetails, setSellerDetails] = useState({
@@ -9,7 +11,6 @@ const Login = () => {
     additionalInfo: '',
   });
   const [userDetails, setUserDetails] = useState(null); // State to store user details after login
-
   const navigate = useNavigate();
 
   const onSubmitHandler = async (e) => {
@@ -45,7 +46,9 @@ const Login = () => {
         alert(`${currentState} successful!`);
         console.log(result);  // Log user data or success message
         if (currentState === 'Login') {
-          setUserDetails(result.user); // Store user details after successful login
+          setIsLoggedIn(true);
+          setUserDetails(result.user);
+ // Store user details after successful login
         }
       } else {
         alert('Error: ' + result.error);

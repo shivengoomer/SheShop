@@ -9,7 +9,7 @@ export const ShopContext = createContext();
 const ShopContextProvider = ({ children }) => {
   const currency = '₹';
   const delivery_fee = 10;
-
+  const [isloggedIn, setIsLoggedIn] = useState(false);
   const [search, setSearch] = useState('');
   const [showSearch, setShowSearch] = useState(false);
   const [cartItems, setCartItems] = useState({});
@@ -106,6 +106,8 @@ const ShopContextProvider = ({ children }) => {
     addOrder, // Add this to allow placing orders
     orders,
     navigate,
+    isloggedIn,
+    setIsLoggedIn,
   };
 
   return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;
