@@ -1,8 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { useContext, useState } from "react";
+<<<<<<< HEAD
 import { ShopContext } from "../Context/ShopContext";
 import Logo from '../myassets/sheshop_shiv_logo.png'
+=======
+import { ShopContext } from "../context/ShopContext";
+import Logo from '../myassets/sheshoplogo.png'
+>>>>>>> c474a8d55155b97764a6551063140501061b5ba0
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
   const { setShowSearch, getCartCount } = useContext(ShopContext);
