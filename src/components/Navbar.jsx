@@ -2,8 +2,6 @@ import { Link, NavLink } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { useContext, useState } from "react";
 <<<<<<< HEAD
-import { ShopContext } from "../Context/ShopContext";
-import Logo from '../myassets/sheshop_shiv_logo.png'
 =======
 import { ShopContext } from "../context/ShopContext";
 import Logo from '../myassets/sheshoplogo.png'
