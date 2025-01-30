@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';  // Import useNavigate
 
 const SearchBar = () => {
   const { products, search, setSearch, showSearch, setShowSearch } = useContext(ShopContext);
@@ -9,6 +9,7 @@ const SearchBar = () => {
   const [animate, setAnimate] = useState('');
   const [filteredProducts, setFilteredProducts] = useState([]);
   const location = useLocation();
+  const navigate = useNavigate();  // Initialize navigate
 
   useEffect(() => {
     if (location.pathname.includes('collection')) {
@@ -45,8 +46,13 @@ const SearchBar = () => {
     }
   };
 
+  const handleProductClick = (productId) => {
+    navigate(`/product/${productId}`);  // Navigate to product detail page
+    setShowSearch(false);  // Close the search bar
+  };
+
   return visible && showSearch ? (
-    <div className={` bg-white text-center ${animate}`}>
+    <div className={`border-t border-b bg-white text-center ${animate}`}>
       <div className="w-[450px] inline-flex items-center justify-center border border-gray-400 px-5 py-2 my-8 rounded-full">
         <input
           type="text"
@@ -60,7 +66,11 @@ const SearchBar = () => {
       {filteredProducts.length > 0 && (
         <div className="bg-white shadow-md rounded-md max-w-md mx-auto overflow-y-auto max-h-60">
           {filteredProducts.map((product) => (
-            <div key={product._id} className="p-2 border-b flex items-center cursor-pointer hover:bg-gray-100">
+            <div 
+              key={product._id} 
+              className="p-2 border-b flex items-center cursor-pointer hover:bg-gray-100"
+              onClick={() => handleProductClick(product._id)}  // Navigate on click
+            >
               <img src={product.image} alt={product.name} className="w-10 h-10 object-cover mr-3" />
               <span>{product.name}</span>
             </div>
