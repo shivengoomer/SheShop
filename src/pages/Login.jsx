@@ -1,17 +1,37 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ShopContext } from '../context/ShopContext';
-import { set } from 'mongoose';
+import { ShopContext } from '../Context/ShopContext';
+import { Link } from 'react-router-dom';
+
 const Login = () => {
-  const {setIsLoggedIn} = useContext(ShopContext);
+  const { setIsLoggedIn } = useContext(ShopContext);
   const [currentState, setCurrentState] = useState('Sign Up');
   const [role, setRole] = useState('Buyer');
+  const [stayLoggedIn, setStayLoggedIn] = useState(false);
   const [sellerDetails, setSellerDetails] = useState({
     igUsername: '',
     additionalInfo: '',
   });
-  const [userDetails, setUserDetails] = useState(null); // State to store user details after login
+  const [userDetails, setUserDetails] = useState(null);
   const navigate = useNavigate();
+
+  // Check if there's any logged-in user
+  useEffect(() => {
+    const storedUser = localStorage.getItem('userDetails');
+    if (storedUser) {
+      try {
+        const parsedUser = JSON.parse(storedUser);
+        setUserDetails(parsedUser);
+        setIsLoggedIn(true);
+        // If the user is a seller, navigate to the Seller Products page
+        if (parsedUser.role === 'Seller') {
+          navigate('/seller-products');
+        }
+      } catch (error) {
+        console.error('Error parsing user details from localStorage:', error);
+      }
+    }
+  }, [setIsLoggedIn, navigate]);
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
@@ -44,11 +64,17 @@ const Login = () => {
 
       if (response.ok) {
         alert(`${currentState} successful!`);
-        console.log(result);  // Log user data or success message
-        if (currentState === 'Login') {
-          setIsLoggedIn(true);
-          setUserDetails(result.user);
- // Store user details after successful login
+        setIsLoggedIn(true);
+        setUserDetails(result.user);
+
+        // Store user details in local storage if "Stay Logged In" is checked
+        if (stayLoggedIn) {
+          localStorage.setItem('userDetails', JSON.stringify(result.user));
+        }
+
+        // Redirect to Seller Products page if the user is a seller
+        if (result.user.role === 'Seller') {
+          navigate('/seller-products');
         }
       } else {
         alert('Error: ' + result.error);
@@ -59,18 +85,54 @@ const Login = () => {
     }
   };
 
+  const logoutHandler = () => {
+    localStorage.removeItem('userDetails');
+    setIsLoggedIn(false);
+    setUserDetails(null);
+    navigate('/login');
+  };
+
   return (
     <div>
       {userDetails ? (
-        <div className="user-details">
-          <h2>Welcome, {userDetails.name}!</h2>
-          <p>Email: {userDetails.email}</p>
+        <div className="flex flex-col items-center justify-center h-[80vh] text-gray-800 text-center">
+          <h2 className="text-3xl font-semibold mb-2">Welcome, {userDetails.name}!</h2>
+          <p className="text-lg">Email: {userDetails.email}</p>
+          <p className="text-lg">Role: {userDetails.role}</p>
+
+          <div className="flex flex-row gap-8 mt-4">
+            {userDetails.role === 'Seller' && (
+              <div className="flex flex-col items-center text-lg">
+                <p>Instagram Username: {userDetails.igUsername}</p>
+                <p>Additional Info: {userDetails.additionalInfo}</p>
+              </div>
+            )}
+          </div>
+
+          {/* Show buttons for Seller role */}
           {userDetails.role === 'Seller' && (
-            <>
-              <p>Instagram Username: {userDetails.igUsername}</p>
-              <p>Additional Info: {userDetails.additionalInfo}</p>
-            </>
+            <div className="flex gap-4 mt-4">
+              <Link
+                to="/post-product"
+                className="px-6 py-2 bg-blue-500 text-white text-lg rounded-md hover:bg-blue-600"
+              >
+                Add Product
+              </Link>
+              <Link
+                to="/seller-products"
+                className="px-6 py-2 bg-green-500 text-white text-lg rounded-md hover:bg-green-600"
+              >
+                View Products
+              </Link>
+            </div>
           )}
+
+          <button
+            onClick={logoutHandler}
+            className="mt-6 px-6 py-2 bg-red-500 text-white text-lg rounded-md shadow-md hover:bg-red-600"
+          >
+            Logout
+          </button>
         </div>
       ) : (
         <form
@@ -127,35 +189,32 @@ const Login = () => {
                   className="w-full px-3 py-2 border border-gray-300 rounded"
                   placeholder="Instagram Username"
                   value={sellerDetails.igUsername}
-                  onChange={(e) =>
-                    setSellerDetails({ ...sellerDetails, igUsername: e.target.value })
-                  }
+                  onChange={(e) => setSellerDetails({ ...sellerDetails, igUsername: e.target.value })}
                   required
                 />
                 <textarea
                   className="w-full px-3 py-2 border border-gray-300 rounded"
                   placeholder="Additional Information"
                   value={sellerDetails.additionalInfo}
-                  onChange={(e) =>
-                    setSellerDetails({ ...sellerDetails, additionalInfo: e.target.value })
-                  }
+                  onChange={(e) => setSellerDetails({ ...sellerDetails, additionalInfo: e.target.value })}
                 />
               </>
             )}
 
-            <div className="w-full flex justify-between text-sm mt-[-8px]">
-              <p className="cursor-pointer">Forgot your password?</p>
-              {currentState === 'Login' ? (
-                <p onClick={() => setCurrentState('Sign Up')} className="cursor-pointer">
-                  Create Account
-                </p>
-              ) : (
-                <p onClick={() => setCurrentState('Login')} className="cursor-pointer">
-                  Login Here
-                </p>
-              )}
+            <div className="flex items-center w-full justify-between text-sm mt-[-8px]">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={stayLoggedIn}
+                  onChange={(e) => setStayLoggedIn(e.target.checked)}
+                />
+                Stay Logged In
+              </label>
+              <button type="button" onClick={() => setCurrentState(currentState === 'Login' ? 'Sign Up' : 'Login')} className="cursor-pointer underline">
+                {currentState === 'Login' ? 'Create Account' : 'Login Here'}
+              </button>
             </div>
-            <button className="w-1/2 m-auto bg-black text-white px-8 py-2 mt-4 ">
+            <button className="w-1/2 m-auto bg-black text-white px-8 py-2 mt-4">
               {currentState === 'Login' ? 'Sign In' : 'Sign Up'}
             </button>
           </div>
