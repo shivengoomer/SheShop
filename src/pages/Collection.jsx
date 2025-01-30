@@ -97,7 +97,7 @@ const Collection = () => {
       transition={{ duration: 0.5 }}
       exit={{ opacity: 0 }}
     
-    className="flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t">
+    className="flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10">
       {/* Filter Option */}
       <div className="min-w-52">
         <p
