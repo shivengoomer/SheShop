@@ -17,7 +17,7 @@ This is the frontend of the project, built with React and Vite. It uses Tailwind
    ```
 2. Navigate to the project directory:
    ```sh
-   cd frontend
+   cd sheshop
    ```
 3. Install dependencies:
    ```sh
