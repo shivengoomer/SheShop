@@ -11,18 +11,18 @@ const Product = () => {
   const [image, setImage] = useState('');
   const [size, setSize] = useState('');
 
-  const fetchProductsData = async () => {
-    products.map((product) => {
-      if (product._id === productId) {
-        setProductsData(product);
-        setImage(product.image[0]);
-
-        return null;
-      }
-    });
-  };
-
   useEffect(() => {
+    const fetchProductsData = async () => {
+      products.map((product) => {
+        if (product._id === productId) {
+          setProductsData(product);
+          setImage(product.image[0]);
+
+          return null;
+        }
+      });
+    };
+
     fetchProductsData();
   }, [productId, products]);
 
