@@ -2,9 +2,18 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
+
 dotenv.config();
 
 const app = express();
+
+// Middleware
+app.use(express.json()); // For parsing application/json
+app.use(cors({
+  origin: "http://localhost:5173", // Allow frontend origin
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true, // If using cookies/sessions
+}));
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {
@@ -14,22 +23,22 @@ mongoose.connect(process.env.MONGO_URI, {
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
-// Simple User Schema with Role
+// Define User Schema
 const userSchema = new mongoose.Schema({
   name: String,
   email: { type: String, unique: true },
   password: String,
-  role: { type: String, enum: ['Buyer', 'Seller'], default: 'Buyer' }, // Default role is 'Buyer'
+  role: { type: String, enum: ['Buyer', 'Seller'], default: 'Buyer' },
 });
 const User = mongoose.model("User", userSchema);
 
-// Simple Product Schema
+// Define Product Schema
 const productSchema = new mongoose.Schema({
   name: { type: String, required: true },
   price: { type: Number, required: true },
   description: { type: String, required: true },
   imageUrl: { type: String, required: true },
-  sellerId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }, // Reference to the seller
+  sellerId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
 });
 const Product = mongoose.model("Product", productSchema);
 
@@ -38,18 +47,13 @@ app.get("/", (req, res) => {
   res.send("SheShop API is running...");
 });
 
-// Add User (Signup)
+// User Signup
 app.post("/users/signup", async (req, res) => {
   try {
     const { name, email, password, role } = req.body;
-
-    // Check if user already exists
     const userExists = await User.findOne({ email });
-    if (userExists) {
-      return res.status(400).json({ error: "User already exists" });
-    }
+    if (userExists) return res.status(400).json({ error: "User already exists" });
 
-    // Create a new user with role
     const user = new User({ name, email, password, role });
     await user.save();
 
@@ -59,23 +63,15 @@ app.post("/users/signup", async (req, res) => {
   }
 });
 
-// User Login Route (Without JWT)
+// User Login
 app.post("/users/login", async (req, res) => {
   try {
     const { email, password } = req.body;
-
-    // Find user by email
     const user = await User.findOne({ email });
-    if (!user) {
-      return res.status(400).json({ error: "User not found" });
-    }
+    if (!user) return res.status(400).json({ error: "User not found" });
 
-    // Check if password matches
-    if (user.password !== password) {
-      return res.status(400).json({ error: "Incorrect password" });
-    }
+    if (user.password !== password) return res.status(400).json({ error: "Incorrect password" });
 
-    // Return a simple success message along with the user's role
     res.json({ message: "Login successful", user });
   } catch (err) {
     res.status(400).json({ error: err.message });
@@ -84,22 +80,10 @@ app.post("/users/login", async (req, res) => {
 
 // Add Product
 app.post('/products', async (req, res) => {
-  const { name, price, description, imageUrl, sellerId } = req.body;
-
   try {
-    // Create a new product
-    const newProduct = new Product({
-      name,
-      price,
-      description,
-      imageUrl,
-      sellerId,
-    });
-
-    // Save product to DB
+    const { name, price, description, imageUrl, sellerId } = req.body;
+    const newProduct = new Product({ name, price, description, imageUrl, sellerId });
     await newProduct.save();
-
-    // Send success response
     res.status(201).json(newProduct);
   } catch (error) {
     console.error("Error adding product:", error);
@@ -109,10 +93,8 @@ app.post('/products', async (req, res) => {
 
 // Get Products by Seller
 app.get('/products', async (req, res) => {
-  const { seller } = req.query;
-
   try {
-    // Fetch products for the seller
+    const { seller } = req.query;
     const products = await Product.find({ sellerId: seller });
     res.status(200).json(products);
   } catch (error) {
@@ -121,8 +103,6 @@ app.get('/products', async (req, res) => {
   }
 });
 
-app.use(express.json()); // For parsing application/json
-app.use(cors());
-
+// Start Server
 const PORT = process.env.PORT || 5530;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
